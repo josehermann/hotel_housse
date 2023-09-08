@@ -1,0 +1,82 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<section>
+  <video autoplay loop muted width="100%">
+        <source src="{{ asset('video/spa.mp4') }}" type="video/mp4">
+        
+    </video>
+
+
+</section>
+    <h1 class="text-center text-warning">Le Spa</h1>
+
+    <section>
+        <div class="mx-5 text-center">
+           <p class="mb-4"> 
+            
+Bienvenue dans le Sanctuaire du Luxe et du Bien-Être au Spa de l'Hôtel Oasis
+
+À l'Hôtel Oasis, nous croyons en l'art de la détente ultime et du bien-être absolu. Notre Spa est bien plus qu'un simple endroit pour se ressourcer, c'est un sanctuaire où le luxe et la sérénité se rencontrent pour créer une expérience inoubliable. Découvrez un monde de raffinement où chaque détail a été soigneusement conçu pour élever votre esprit, revitaliser votre corps et apaiser votre âme.
+
+L'Élégance du Spa <br>
+
+Dès que vous franchirez les portes de notre Spa, vous serez enveloppé par une atmosphère d'élégance et de sophistication. Notre décor somptueux, inspiré de l'architecture locale et des influences contemporaines, crée un cadre enchanteur où chaque coin est une invitation à la relaxation. Chaque espace a été pensé pour évoquer un sentiment de calme et de sérénité, avec des matériaux nobles, des éclairages doux et une attention méticuleuse aux détails.
+
+Traitement Personnalisé  <br>
+
+Au cœur de notre Spa, vous trouverez une équipe de thérapeutes hautement qualifiés et dévoués à votre bien-être. Chacun de nos soins est conçu pour répondre à vos besoins individuels, avec des traitements sur mesure qui vous laisseront vous sentir rajeuni et revitalisé. Que ce soit pour un massage relaxant, un soin du visage luxueux, ou un bain apaisant, chaque expérience est une symphonie de détente conçue spécialement pour vous.
+
+Installations de Luxe <br>
+
+Notre Spa offre un éventail d'installations de luxe pour compléter votre expérience. Détendez-vous dans notre piscine intérieure chauffée, profitez du sauna ou du hammam pour une détoxification totale, ou reposez-vous dans nos salles de relaxation élégantes. Laissez-vous bercer par le murmure apaisant de l'eau et l'ambiance apaisante de notre espace bien-être.
+
+Produits de Prestige <br>
+
+Nous avons sélectionné avec soin des produits de spa de renommée internationale, formulés avec des ingrédients de la plus haute qualité pour nourrir et revitaliser votre peau. Chaque produit que nous utilisons est choisi pour vous offrir une expérience sensorielle de luxe, tout en respectant votre bien-être.  <br> 
+
+
+
+Évasion Totale
+
+ Au Spa de l'Hôtel Oasis, nous nous engageons à vous offrir une évasion totale du stress de la vie quotidienne. Que ce soit pour une journée de bien-être ou un séjour prolongé, notre Spa est l'endroit idéal pour retrouver votre équilibre intérieur, rajeunir votre corps et nourrir votre esprit. <br>
+
+Découvrez le raffinement ultime au Spa de l'Hôtel Oasis. Réservez votre expérience de bien-être aujourd'hui et plongez dans le luxe, la détente et la régénération. Laissez-vous dorloter, car vous méritez ce qu'il y a de mieux.</p>
+            
+            
+        
+        </div>
+    
+    </section>
+
+   
+    
+
+    <section class="row justify-content-center mx-5* mb-4">
+
+    
+        
+        {% for spa in spas %}
+        <ul  class="card" style="width: 18rem; row">
+            <li>
+                <h2>{{ spa.titre }}</h2>
+                <p>{{ spa.description|raw }}</p>
+                <p>Prix: {{ spa.prix}} €</p>
+                <p>Date d'enregistrement : {{ spa.dateenregistrement|date('d/m/Y H:i:s') }}</p>
+                <p><img src="{{ asset('uploads/img/' ~ spa.photo) }}" alt="{{ spa.titre }}" width="200"></p>
+                 <p><a href="#" class="btn btn-dark">Go somewhere</a></p>
+                
+            </li>
+            </ul>
+           
+        {% endfor %}
+
+        </section>
+    
+
+            
+                
+
+
+{% endblock %}

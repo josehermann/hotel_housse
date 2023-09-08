@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Hotel Housse{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+    
+    <nav class="navbar navbar-expand-lg bg-dark  " data-bs-theme="dark">
+  <div class="container-fluid  ">
+   <a class="navbar-brand mx-5" href="{{ path('accueil') }}">
+        <img src="{{ asset('images/hotellogo.png') }}" alt="Le logo de l'ehotel" width="150" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('accueil') }}">Accueil
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('contact') }}"></a>
+        </li>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link active" href="{{ path('chambre') }}">Chambre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('contact') }}"></a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('restaurant') }}">Restaurant</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('contact') }}"></a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('spa') }}">Le spa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('contact') }}"></a>
+        </li>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" href="{{ path('avis') }}">Avis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('contact') }}"></a>
+        </li>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link active" href="{{ path('hotel') }}">Hotel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('contact') }}"></a>
+        </li>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('actualite') }}">Actualités</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('contact') }}"></a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('contact') }}">Contact</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{{ path('contact') }}"></a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{{ path('contact') }}"></a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('contact') }}"></a>
+        </li>
+        </li>
+      
+        
+        
+      </ul>
+      <form class="d-flex">
+        {# <input class="form-control me-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> #}
+        <a class="navbar-brand  me-sm-2" href="#">
+        <img src="{{ asset('images/logo_drapeau_france.ico') }}" alt="Le logo France" width="20" height="20">
+         </a>
+        <a class="navbar-brand my-2 my-sm-0" href="#">
+        <img src="{{ asset('images/logo_drapeau_england.ico') }}" alt="Le logo de Engleterre" width="20" height="20">
+         </a>
+      </form>
+    </div>
+  </div>
+</nav>
+        {% block body %}{% endblock %}
+
+
+         {% block footer %}
+
+
+        <!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+ <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #3b5998;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #55acee;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #dd4b39;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              {# <strong>Inscrivez-vous à notre newsletter</strong> #}
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example21" class="form-control" />
+              <label class="form-label" for="form5Example21">Email</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              S'inscrire à la newsletter
+            </button>
+          </div>
+          
+        </div>
+       
+      </form>
+    </section>
+    
+    <section class="">
+      
+      <div class="row">
+      
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Liens divers:</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Partage</a>
+            </li>
+            
+            
+        </div>
+       
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          
+          <ul class="list-unstyled mb-0 ">
+            <li>
+              <a href="#!" class="text-white text-decoration-none">Mentions Légales</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white text-decoration-none">Imprimer la page</a>
+            </li>
+          
+          </ul>
+        </div>
+       
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+         
+
+          <ul class="list-unstyled mb-0 ">
+            <li>
+              <a href="#!" class="text-white text-decoration-none">Conditions Générales de Vente</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+         
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white text-decoration-none">Plan du site</a>
+            </li>
+         
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Par:
+    <a class="text-white text-decoration-none" href="# ">José AYELESSO</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+{% endblock %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </body>
+</html>

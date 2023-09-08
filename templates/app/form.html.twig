@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+{% block title %}{% endblock %}
+{% block body %}15
+<h1>creation</h1>
+
+{{ form_start (formSlider.photo)}}
+{{ form_widget (formSlider.ordre)}}
+{{ form_start (formSlider.date_enregistrement)}}
+
+{{ form_end (formSlider)}}
+
+{% endblock %}

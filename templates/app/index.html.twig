@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+
+
+<div id="carouselExampleCaptions" class="carousel slide">
+
+<h1 class="position-absolute top-50 start-50 translate-middle z-2 {{asset('')}} " >HoTeL HoUsSe
+</h1>
+
+  <div class="carousel-indicators z-1">
+
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+
+  {% for item in sliders %}
+
+  
+    <div class="carousel-item {% if item.ordre ==  1 %} active   {% endif %}">
+      <img src="{{asset('uploads/img/' ~ item.photo)}}" class="d-block w-100 z-1" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+      
+        
+      </div>
+    </div>
+   {% endfor %}  
+   
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+
+
+<section class="mx-5 text-center">
+
+<div>
+        <h1 class="text-warning"> Bienvenue à l'Hôtel Housse </h1>
+        <p> Votre Oasis de Luxe en Campagne <br>
+Découvrez l'élégance intemporelle et le charme naturel de notre hôtel de luxe en campagne. Niché au cœur d'un paysage pittoresque, l'Hôtel Housse vous offre une expérience exceptionnelle où le confort raffiné rencontre la tranquillité champêtre.<br>
+
+Entouré de champs verdoyants et de paysages bucoliques, notre hôtel est l'endroit idéal pour échapper à l'agitation de la vie quotidienne. Que vous soyez à la recherche d'un week-end romantique, d'une retraite paisible en famille ou d'une escapade entre amis, notre établissement vous offre tout ce dont vous avez besoin pour une expérience mémorable. <br>
+
+Profitez de nos chambres somptueuses, de notre cuisine gastronomique préparée par des chefs talentueux, et laissez-vous dorloter dans notre spa luxueux. Explorez les environs pittoresques, promenez-vous dans nos jardins bien entretenus ou détendez-vous au bord de notre piscine à débordement offrant une vue panoramique sur la campagne environnante.</p>
+</div>
+
+
+</section>
+
+  <section>
+
+     <video autoplay loop muted width="100%">
+        <source src="{{ asset('video/film.mp4') }}" type="video/mp4">
+        
+    </video>
+
+  </section>
+
+  
+<section class="row d-flex justify-content-center mx-5">
+
+
+ <div class="card" style="width: 18rem; row">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+ <div class="card" style="width: 18rem; row">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+ <div class="card"  style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </section>
+</div>
+
+
+{% endblock %}

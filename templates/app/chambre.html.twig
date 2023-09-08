@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Liste des chambres</h1>
+
+    <section class="row d-flex justify-content-center mx-5">
+        
+        {% for chambre in chambres %}
+        <ul "card" style="width: 18rem; row">
+            <li>
+                <h2>{{ chambre.titre }}</h2>
+                <p>{{ chambre.descriptioncourte|raw }}</p>
+                <p>{{ chambre.descriptionlongue|raw }}</p>
+                <p>Prix journalier : {{ chambre.prixjournalier }} €</p>
+                <p>Date d'enregistrement : {{ chambre.dateenregistrement|date('d/m/Y H:i:s') }}</p>
+                <p><img src="{{ asset('uploads/img/' ~ chambre.photo) }}" alt="{{ chambre.titre }}" width="200"></p>
+            </li>
+             
+                <p><a href="{{'reservation'}}" class="btn btn-dark">Réservez</a></p>
+                
+            </ul>
+        {% endfor %}
+
+        </section>
+    
+
+            
+                
+
+
+{% endblock %}
